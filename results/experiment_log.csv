@@ -1,0 +1,5 @@
+exp_id,model,config,val_acc,val_precision,val_recall,val_f1,test_acc,test_precision,test_recall,test_f1,time_sec,note
+1,Dummy (lớp đa số),strategy='most_frequent',0.125,0.0156,0.125,0.0278,0.125,0.0156,0.125,0.0278,0.03,baseline
+2,HSV Color Hist + Logistic Regression,HSV 8-bins + StandardScaler + LogReg (C=1.0),0.8472,0.8501,0.8472,0.8449,0.7986,0.8001,0.7986,0.7966,0.12,classic ML baseline
+3,MobileNetV3-Small (frozen),"freeze backbone, lr=1e-3, 3 epochs, batch=32",0.2569,0.2829,0.2569,0.2021,0.2292,0.248,0.2292,0.1664,64.39,frozen backbone
+4,ResNet18 (fine-tune),"unfreeze all, lr=3e-4, Aug=True, 3 epochs",0.8958,0.9016,0.8958,0.8904,0.9167,0.9216,0.9167,0.9145,242.86,main model
